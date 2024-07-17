@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jul 17 17:50:24 GMT 2024","Wed Jul 17 17:50:24 GMT 2024","92","","teglalap_test","TestTeglalap","","","test_blank_1",""
+"passed","Wed Jul 17 17:50:25 GMT 2024","Wed Jul 17 17:50:25 GMT 2024","103","","teglalap_test","TestTeglalap","","","test_numbers_2",""
+"passed","Wed Jul 17 17:50:23 GMT 2024","Wed Jul 17 17:50:23 GMT 2024","105","","teglalap_test","TestTeglalap","","","test_non_numbers_1",""
+"passed","Wed Jul 17 17:50:26 GMT 2024","Wed Jul 17 17:50:26 GMT 2024","108","","teglalap_test","TestTeglalap","","","test_non_numbers_2",""
+"passed","Wed Jul 17 17:50:22 GMT 2024","Wed Jul 17 17:50:22 GMT 2024","503","","teglalap_test","TestTeglalap","","","test_numbers_1",""
+"passed","Wed Jul 17 17:50:27 GMT 2024","Wed Jul 17 17:50:27 GMT 2024","101","","teglalap_test","TestTeglalap","","","test_blank_2",""
