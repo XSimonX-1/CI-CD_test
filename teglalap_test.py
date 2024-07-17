@@ -1,29 +1,3 @@
-"""Keressük a téglalap kerületét
-
-Készíts egy python applikációt (egy darab python file) ami selenium-ot használ.
-Az ellenőrzésekhez pytest keretrendszert használj, valamint fontos az `assert` összehasonlítások használata is!
-
-A program töltse be a téglalap kerülete app-ot.
-https://high-flyer.hu/hetihazi/feladat1_teglalap.html
-
-Feladatod, hogy automatizáld selenium webdriverrel az alábbi funkcionalitásokat a téglalap kerülete appban:
-
-Helyes kitöltés esete:
-    a: 74
-    b: 32
-    Eredmény: 212
-
-Nem számokkal történő kitöltés:
-    a: kiskutya
-    b: 32
-    Eredmény: NaN
-
-Üres kitöltés:
-    a: <üres>
-    b: <üres>
-    Eredmény: NaN
-"""
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
@@ -31,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 import pytest
+import allure
 
 
 class TestTeglalap(object):
@@ -38,11 +13,11 @@ class TestTeglalap(object):
     def setup_method(self):
         URL = 'https://high-flyer.hu/hetihazi/feladat1_teglalap.html'
         options = Options()
-        options.add_argument('window-position=-2000,-1000')
         options.add_experimental_option("detach", True)
+        options.add_argument('--headless')
         self.browser = webdriver.Chrome(options=options)
         self.browser.get(URL)
-        self.browser.maximize_window()
+        self.browser.set_window_size(1600, 700)
 
     def teardown_method(self):
         self.browser.quit()
